@@ -1,0 +1,37 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Person API",
+    "version": "1.0"
+  },
+  "host": "person-api-3scale-apicast-staging.example.com",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "operationId": "PersonGet",
+        "summary": "Get Persons",
+        "description": "Get Persons from the server",
+        "responses": {
+          "200": {
+            "description": "Persons"
+          }
+        }
+      }
+    }
+  },
+  "security": [
+    {
+      "APIKeyHeader": []
+    }
+  ],
+  "securityDefinitions": {
+    "APIKeyHeader": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "user-key"
+    }
+  }
+}

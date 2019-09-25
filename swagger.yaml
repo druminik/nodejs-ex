@@ -1,0 +1,21 @@
+swagger: '2.0'
+info:
+  title: 'Person API'
+  version: '1.0'
+host: 'echo-api.3scale.net'
+paths:
+  /:
+    get:
+      operationId: PersonGet
+      summary: 'Get Persons'
+      description: 'Get Persons from the server'
+      responses:
+        200:
+          description: 'Persons'
+security:
+- APIKeyHeader: []
+securityDefinitions:
+  APIKeyHeader:
+     type: apiKey
+     in: header
+     name: user-key
